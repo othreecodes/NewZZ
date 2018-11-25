@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:background="@color/colorWhite"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/chooseinterests"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.chooseinterests.ChooseInterestsFragment">
+
+    <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello."
+
+
+            android:textSize="100sp"
+            android:textColor="@color/grey_40"
+            app:fontFamily="@font/roboto_bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        <requestFocus/>
+    </TextView>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:boxBackgroundColor="@color/colorPrimary"
+            android:layout_width="match_parent"
+                                                           android:layout_height="wrap_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+                android:hint="What Interests you?"
+                android:textColorHighlight="@color/colorPrimary"
+                android:backgroundTint="@color/colorPrimary"
+                android:drawableRight="@drawable/ic_search_grey_24dp"
+                android:layout_width="match_parent"
+                                                                 android:layout_height="match_parent"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerinterests"
+
+            tools:listitem="@layout/content_interest_list"
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+                                               android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</LinearLayout>

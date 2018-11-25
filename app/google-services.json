@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "3382707355",
+    "firebase_url": "https://pickyapp-c7598.firebaseio.com",
+    "project_id": "pickyapp-c7598",
+    "storage_bucket": "pickyapp-c7598.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:3382707355:android:551acba1407a5411",
+        "android_client_info": {
+          "package_name": "com.envelope.pickyapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "3382707355-c0j9g2o5cmj906r5ho0e9srj1gcpcvk9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.envelope.pickyapp",
+            "certificate_hash": "01b1f1f7098f98de68680176f3ae14bbf122dbf8"
+          }
+        },
+        {
+          "client_id": "3382707355-se651unrp769m3m1ucdo5l50incuh764.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBE_pppm-Q7ieu3yUqKMuuWTO_Z4ybDAts"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "3382707355-se651unrp769m3m1ucdo5l50incuh764.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
