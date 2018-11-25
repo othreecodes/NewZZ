@@ -1,18 +1,26 @@
 package com.envelope.pickyapp.ui.chooseinterests
 
+import android.content.Intent
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.recyclerview.widget.RecyclerView
 import com.envelope.pickyapp.R
 import com.envelope.pickyapp.data.dto.Interest
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.andrognito.flashbar.Flashbar
+import com.envelope.pickyapp.ui.newshome.NewsHomeActivity
+import com.envelope.pickyapp.ui.registeremail.RegisterEmailActivity
 import com.google.android.flexbox.*
 import com.mooveit.library.Fakeit
 import kotlinx.android.synthetic.main.choose_interests_fragment.*
-import java.util.*
 
 
 class ChooseInterestsFragment : Fragment() {
@@ -50,8 +58,10 @@ class ChooseInterestsFragment : Fragment() {
         for(i in 1..20){
             ind.add(Interest(Fakeit.artist().name()))
         }
-        val sglm = StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL)
+
+        viewModel.allInterests.value = ind
         val layoutManager = FlexboxLayoutManager(context)
+
         layoutManager.flexDirection = FlexDirection.ROW
         layoutManager.alignItems = AlignItems.STRETCH
 
@@ -59,7 +69,66 @@ class ChooseInterestsFragment : Fragment() {
 
         recyclerinterests.layoutManager = layoutManager
 
-        recyclerinterests.adapter= ChooseInterestsAdapter(ind)
+        recyclerinterests.adapter = ChooseInterestsAdapter(viewModel.allInterests.value!!,viewModel.chosenInterest)
+
+        val builder=Flashbar.Builder(activity!!)
+            .gravity(Flashbar.Gravity.BOTTOM)
+            .primaryActionText("Continue")
+            .primaryActionTextSizeInSp(20f)
+            .messageSizeInSp(20f)
+            .backgroundColor(resources.getColor(R.color.colorPrimary))
+            .message("You're all set !")
+
+            .primaryActionTapListener(object :Flashbar.OnActionTapListener{
+                override fun onActionTapped(bar: Flashbar) {
+
+                    startActivity(Intent(activity, NewsHomeActivity::class.java))
+
+
+                }
+
+            })
+            .build()
+
+        viewModel.chosenInterest.observe(this,androidx.lifecycle.Observer { it ->
+
+            val size =  it.size
+            if (size in 1..9){
+                if(builder.isShowing()){
+                    builder.dismiss()
+                }
+
+                Toast.makeText(context,"Select ${10-size} more to continue",Toast.LENGTH_LONG).show()
+            }else if(it.size>=10){
+
+                    if(!builder.isShowing()) {
+                        builder.show()
+                    }
+            }
+
+        })
+
+
+
+        filtertext.addTextChangedListener(object :TextWatcher{
+            override fun afterTextChanged(s: Editable?) {
+
+
+            }
+
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+
+            }
+
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                (recyclerinterests.adapter as ChooseInterestsAdapter).interests = viewModel.allInterests.value!!.filter {
+                    it.name.toLowerCase().contains(s!!)
+                }.toMutableList()
+                (recyclerinterests.adapter as ChooseInterestsAdapter).notifyDataSetChanged()
+            }
+
+        })
 
     }
 

@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools"
-          package="com.envelope.pickyapp"
-
-        >
+          package="com.envelope.pickyapp">
 
     <application
             android:name=".PickyApplication"
@@ -25,6 +23,8 @@
         <activity android:name=".ui.registeremail.RegisterEmailActivity">
         </activity>
         <activity android:name=".ui.chooseinterests.ChooseInterestsActivity">
+        </activity>
+        <activity android:name=".ui.newshome.NewsHomeActivity">
         </activity>
     </application>
 

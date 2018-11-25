@@ -32,13 +32,13 @@
 
     <com.google.android.material.textfield.TextInputLayout
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
             app:boxBackgroundColor="@color/colorPrimary"
             android:layout_width="match_parent"
                                                            android:layout_height="wrap_content">
 
         <com.google.android.material.textfield.TextInputEditText
                 android:hint="What Interests you?"
+                android:id="@+id/filtertext"
                 android:textColorHighlight="@color/colorPrimary"
                 android:backgroundTint="@color/colorPrimary"
                 android:drawableRight="@drawable/ic_search_grey_24dp"
@@ -52,7 +52,7 @@
             android:id="@+id/recyclerinterests"
 
             tools:listitem="@layout/content_interest_list"
-            android:layout_marginTop="8dp"
+            android:paddingTop="8dp"
             android:layout_width="match_parent"
                                                android:layout_height="wrap_content">
 

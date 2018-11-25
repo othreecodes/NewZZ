@@ -37,6 +37,8 @@ class RegisterEmailFragment : androidx.fragment.app.Fragment() {
                 email_text.setError("Please fill in this field")
                 return@setOnClickListener
             }
+                continue_button.isEnabled = false
+            continue_button.setText("Please wait...")
                 Toast.makeText(context,"Email Verification sent, Email confirmed",Toast.LENGTH_LONG).show().apply {
                     startActivity(Intent(activity,ChooseInterestsActivity::class.java))
                 }
