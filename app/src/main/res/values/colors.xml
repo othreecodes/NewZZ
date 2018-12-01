@@ -10,6 +10,7 @@
     <color name="colorPrimaryDark">#ffd88202</color>
     <color name="colorProgress">#ff00796b</color>
     <color name="colorWhite">#ffffffff</color>
+    <color name="colorOffWhite">#FBFBFB</color>
 
     <color name="black_overlay">#66000000</color>
 

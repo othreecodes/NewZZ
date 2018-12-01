@@ -2,5 +2,11 @@
     <string name="app_name">PickyApp</string>
 
     <string name="title_activity_register_email">RegisterEmailActivity</string>
+    <string name="terms_coditions"><![CDATA[Terms & Coditions]]></string>
+    <string name="rules">Rules</string>
+    <string name="picky_play">Picky Play</string>
+    <string name="help_contact"><![CDATA[Help & Contact]]></string>
+    <string name="faq">FAQ</string>
+    <string name="invite">Invite</string>
 
 </resources>

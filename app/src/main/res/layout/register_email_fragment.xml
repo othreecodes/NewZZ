@@ -29,7 +29,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Verify Your Email"
-                android:fontFamily="@font/roboto_regular"
+                app:fontFamily="@font/roboto_regular"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline5"
                 android:textColor="@color/colorPrimaryDark"
                 android:textStyle="bold" />
@@ -38,8 +38,12 @@
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/spacing_medium"
+                app:fontFamily="@font/robotocondensed_light"
                 android:text="Please enter your email to receive a verification code."
                 android:textAlignment="center"
+
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Subhead"
                 android:textColor="@color/grey_60" />
 
@@ -52,23 +56,27 @@
 
 
 
-            <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Email Address"
-                    android:inputType="textEmailAddress"
-                    android:maxLines="1"
-                    android:id="@+id/email_text"
-                    android:singleLine="true"
-                    android:text=""
-                    app:fontFamily="@font/roboto_light"
-                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/grey_90"
-                    android:textStyle="normal" >
+            <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
+                                                                   android:layout_height="wrap_content">
 
-                <requestFocus/>
+                <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Email Address"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:id="@+id/email_text"
+                        android:singleLine="true"
 
-            </com.google.android.material.textfield.TextInputEditText>
+                        app:fontFamily="@font/roboto_light"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                        android:textColor="@color/grey_90"
+                >
+
+                    <requestFocus/>
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
 

@@ -19,7 +19,9 @@ import com.andrognito.flashbar.Flashbar
 import com.envelope.pickyapp.ui.newshome.NewsHomeActivity
 import com.envelope.pickyapp.ui.registeremail.RegisterEmailActivity
 import com.google.android.flexbox.*
+import com.google.gson.Gson
 import com.mooveit.library.Fakeit
+import es.dmoral.prefs.Prefs
 import kotlinx.android.synthetic.main.choose_interests_fragment.*
 
 
@@ -81,8 +83,9 @@ class ChooseInterestsFragment : Fragment() {
 
             .primaryActionTapListener(object :Flashbar.OnActionTapListener{
                 override fun onActionTapped(bar: Flashbar) {
-
+                    Prefs.with(context!!).write("interests", Gson().toJson(viewModel.chosenInterest.value))
                     startActivity(Intent(activity, NewsHomeActivity::class.java))
+                    activity!!.finish()
 
 
                 }
@@ -98,7 +101,7 @@ class ChooseInterestsFragment : Fragment() {
                     builder.dismiss()
                 }
 
-                Toast.makeText(context,"Select ${10-size} more to continue",Toast.LENGTH_LONG).show()
+                Toast.makeText(context,"Select ${10-size} more to continue",Toast.LENGTH_SHORT).show()
             }else if(it.size>=10){
 
                     if(!builder.isShowing()) {

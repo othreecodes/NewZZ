@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/share" android:title="@string/invite" android:icon="@drawable/ic_invite" app:showAsAction="always"/>
+    <item android:id="@+id/picky_play" android:title="@string/picky_play" app:showAsAction="collapseActionView"/>
+    <item android:id="@+id/rules" android:title="@string/rules" app:showAsAction="collapseActionView"/>
+    <item android:id="@+id/terms" android:title="@string/terms_coditions" app:showAsAction="collapseActionView"/>
+    <item android:id="@+id/faq" android:title="@string/faq" app:showAsAction="collapseActionView"/>
+    <item android:id="@+id/help" android:title="@string/help_contact" app:showAsAction="collapseActionView"/>
+
+
+</menu>

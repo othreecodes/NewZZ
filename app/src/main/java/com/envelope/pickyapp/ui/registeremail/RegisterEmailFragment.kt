@@ -9,6 +9,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.envelope.pickyapp.R
 import com.envelope.pickyapp.ui.chooseinterests.ChooseInterestsActivity
+import com.google.gson.Gson
+import es.dmoral.prefs.Prefs
 import kotlinx.android.synthetic.main.register_email_fragment.*
 
 
@@ -40,6 +42,7 @@ class RegisterEmailFragment : androidx.fragment.app.Fragment() {
                 continue_button.isEnabled = false
             continue_button.setText("Please wait...")
                 Toast.makeText(context,"Email Verification sent, Email confirmed",Toast.LENGTH_LONG).show().apply {
+
                     startActivity(Intent(activity,ChooseInterestsActivity::class.java))
                 }
 
