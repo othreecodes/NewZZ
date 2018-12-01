@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+            android:id="@+id/app_bar_search"
+            android:icon="@drawable/ic_search"
+            android:title="Search" app:actionViewClass="android.widget.SearchView" app:showAsAction="always"/>
     <item android:id="@+id/share" android:title="@string/invite" android:icon="@drawable/ic_invite" app:showAsAction="always"/>
+    <item android:id="@+id/reload" android:title="Reload" android:icon="@drawable/ic_reload" app:showAsAction="always"/>
+
     <item android:id="@+id/picky_play" android:title="@string/picky_play" app:showAsAction="collapseActionView"/>
     <item android:id="@+id/rules" android:title="@string/rules" app:showAsAction="collapseActionView"/>
     <item android:id="@+id/terms" android:title="@string/terms_coditions" app:showAsAction="collapseActionView"/>

@@ -13,7 +13,7 @@
     <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
             android:background="@color/colorWhite"
-
+            android:id="@+id/app_bar"
             android:padding="8dp"
             android:layout_height="wrap_content">
 
@@ -30,6 +30,47 @@
 
         </androidx.appcompat.widget.Toolbar>
     </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+
+
+            android:clipToPadding="false"
+            android:clipChildren="false" app:layout_constraintTop_toBottomOf="@id/app_bar"
+            android:layout_marginTop="8dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp" android:layout_marginRight="16dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.yuyakaido.android.cardstackview.CardStackView
+                android:id="@+id/card_stack_view"
+
+                android:layout_width="match_parent"
+                android:layout_height="0dp" android:baselineAligned="false" android:layout_weight="1">
+        </com.yuyakaido.android.cardstackview.CardStackView>
+
+        <LinearLayout
+                android:layout_below="@id/card_stack_view"
+                android:orientation="vertical"
+                android:layout_width="match_parent" android:layout_height="0dp"
+                android:baselineAligned="false" android:layout_weight=".5">
+            <TextView android:id="@+id/news_source" android:textColor="@color/colorPrimary"
+                      app:fontFamily="@font/roboto_bold" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Sky Sports"/>
+            <TextView android:id="@+id/news_title" android:textSize="28sp" android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:text="Messi Leaves Barcelona for Real madrid"/>
+
+            <TextView android:id="@+id/news_category_when" android:textColor="@color/grey_20"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content" android:text="Football • 10 hrs ago"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
     <com.google.android.material.floatingactionbutton.FloatingActionButton android:layout_width="wrap_content"
                                                                            app:backgroundTint="@color/colorInitial"
                                                                            android:layout_height="wrap_content"
