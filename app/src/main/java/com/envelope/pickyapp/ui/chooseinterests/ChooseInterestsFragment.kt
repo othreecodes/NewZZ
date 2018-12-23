@@ -80,7 +80,6 @@ class ChooseInterestsFragment : Fragment() {
             .messageSizeInSp(20f)
             .backgroundColor(resources.getColor(R.color.colorPrimary))
             .message("You're all set !")
-
             .primaryActionTapListener(object :Flashbar.OnActionTapListener{
                 override fun onActionTapped(bar: Flashbar) {
                     Prefs.with(context!!).write("interests", Gson().toJson(viewModel.chosenInterest.value))
