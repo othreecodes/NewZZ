@@ -95,28 +95,28 @@ class NewsHomeFragment : Fragment(), SearchView.OnQueryTextListener, CardStackLi
         manager.setCanScrollVertical(false)
         adapter = NewsCardAdapter(
             listOf(
-                NewsItem(
+                NewsItem("",
+                    "Messi Quits football",
+                    "Messi finally quits footbal after 20 years",
+                    "https://cdn2.theweek.co.uk/sites/theweek/files/2018/03/lionel_messi_release_clause_barcelona_transfer_news_getty_images_927115406.jpg",
+                    "CNN"
+                ),
+                NewsItem("",
                     "Messi Quits football",
                     "Messi finally quits footbal after 20 years",
                     "https://source.unsplash.com/Xq1ntWruZQI/600x800",
                     "CNN"
                 ),
-                NewsItem(
+                NewsItem("",
                     "Messi Quits football",
                     "Messi finally quits footbal after 20 years",
                     "https://source.unsplash.com/Xq1ntWruZQI/600x800",
                     "CNN"
                 ),
-                NewsItem(
+                NewsItem("",
                     "Messi Quits football",
                     "Messi finally quits footbal after 20 years",
-                    "https://source.unsplash.com/Xq1ntWruZQI/600x800",
-                    "CNN"
-                ),
-                NewsItem(
-                    "Messi Quits football",
-                    "Messi finally quits footbal after 20 years",
-                    "https://source.unsplash.com/Xq1ntWruZQI/600x800",
+                    "https://cdn2.theweek.co.uk/sites/theweek/files/2018/03/lionel_messi_release_clause_barcelona_transfer_news_getty_images_927115406.jpg",
                     "CNN"
                 )
             )
